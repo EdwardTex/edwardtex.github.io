@@ -1,28 +1,28 @@
 # Site settings
 title: Tex's Desktop
 SEOTitle: Tex的书桌 | Tex's Desktop
-header-img: img/post-bg-desk.jpg
+header-img: img/post-desk.jpg
 email: edwardtex@163.com
 description: "抚盘且生花"
 keyword: "Tex"
 url: "http://edwardtex.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/EdwardTex/edwardtex.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Indulge in laziness, you can’t make great efforts."
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/post-avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-zhihu_username:     qiubaiying
-github_username:    qiubaiying
-facebook_username:  baiying.qiu.7
-jianshu_username:   e71990ada2fd
+zhihu_username:     E.Tex
+github_username:    EdwardTex
+facebook_username:  EdwardTex
+#jianshu_username:   e71990ada2fd
 #twitter_username:   qiubaiying
 
 
