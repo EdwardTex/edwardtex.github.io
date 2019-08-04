@@ -11,7 +11,7 @@ github_repo: "https://github.com/EdwardTex/edwardtex.github.io.git" # you code r
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Indulge in laziness, you can’t make great efforts."
+sidebar-about-description: "抚盘且生花"
 sidebar-avatar: /img/post-avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
