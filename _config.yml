@@ -1,7 +1,7 @@
 # Site settings
 title: Tex's Desktop
 SEOTitle: Tex的书桌 | Tex's Desktop
-header-img: img/post-desk.png
+header-img: img/post-desk.jpg
 email: edwardtex@163.com
 description: "抚盘且生花"
 keyword: "Tex"
@@ -19,7 +19,7 @@ sidebar-avatar: /img/post-avatar.jpg      # use absolute URL, seeing it's used i
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-zhihu_username:     E.Tex
+zhihu_username:     sutax
 github_username:    EdwardTex
 facebook_username:  EdwardTex
 #jianshu_username:   e71990ada2fd
