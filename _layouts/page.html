@@ -204,11 +204,11 @@ layout: default
                     </div>
                 </section>
                 <!-- Friends Blog -->
-                {% if site.friends %}
+                {% if site.BlogRoll %}
                 <hr>
-                <h5>FRIENDS</h5>
+                <h5>BLOGROLL</h5>
                 <ul class="list-inline">
-                    {% for friend in site.friends %}
+                    {% for friend in site.BlogRoll %}
                         <li><a href="{{friend.href}}">{{friend.title}}</a></li>
                     {% endfor %}
                 </ul>
