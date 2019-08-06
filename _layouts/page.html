@@ -58,20 +58,8 @@ layout: default
                         <li><a href="{{friend.href}}">{{friend.title}}</a></li>
                     {% endfor %}
                 </ul>
-                {% endif %}
-		    
-		<!-- Friends Blog -->
-                {% if site.friends %}
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-                    {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-		    
-		    
+                {% endif %}		   
+		   		    
             </div>
         {% else %}
 
@@ -203,7 +191,8 @@ layout: default
                         {% endif %}
                     </div>
                 </section>
-                <!-- Friends Blog -->
+		    
+                <!-- BlogRoll -->
                 {% if site.BlogRoll %}
                 <hr>
                 <h5>BLOGROLL</h5>
@@ -213,6 +202,32 @@ layout: default
                     {% endfor %}
                 </ul>
                 {% endif %}
+		    
+		 <!-- Aca-People -->
+                {% if site.Aca-People %}
+                <hr>
+                <h5>ACA-PEOPLE</h5>
+                <ul class="list-inline">
+                    {% for friend in site.Aca-People %}
+                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+		    
+		    
+		<!-- WonderTools -->
+                {% if site.WonderTools %}
+                <hr>
+                <h5>WONDERTOOLS</h5>
+                <ul class="list-inline">
+                    {% for friend in site.WonderTools %}
+                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+		    
+		    
+		    
     		</div>
         {% endif %}
 	</div>
