@@ -100,7 +100,7 @@ service-worker: true
 BlogRoll: [
     {
         title: "阿里褚霸 Ali_YuFeng",
-        href: "blog.yufeng.info"
+        href: "https://blog.yufeng.info"
     },{
         title: "廖雪峰",
         href: "https://www.liaoxuefeng.com/"
