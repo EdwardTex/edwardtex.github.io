@@ -225,13 +225,15 @@ layout: default
                     {% endfor %}
                 </ul>
                 {% endif %}
-		   
+		 
+		<!-- Donate -->
 		{% if site.donate-qrcode %}
+		<hr>
+		<h5>DONATE</h5>
+		<ul class="list-inline">
                     <img src="{{site.donate-qrcode}}"/>
-                {% endif %}
-		    
-                {% if site.donate-description %}
-                    <p>{{site.donate-description}}</p>
+		    <p>{{site.donate-description}}</p>
+		</ul>
                 {% endif %}
 		    
 		    
