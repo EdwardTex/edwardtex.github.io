@@ -225,7 +225,14 @@ layout: default
                     {% endfor %}
                 </ul>
                 {% endif %}
+		   
+		{% if site.donate-qrcode %}
+                    <img src="{{site.donate-qrcode}}"/>
+                {% endif %}
 		    
+                {% if site.donate-description %}
+                    <p>{{site.donate-description}}</p>
+                {% endif %}
 		    
 		    
     		</div>
