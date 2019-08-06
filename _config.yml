@@ -137,3 +137,7 @@ WonderTools: [
         href: "https://ocw.mit.edu/index.html"
     }
 ]
+
+# donate coffee
+donate-description: "如果对你有帮助就请我喝杯咖啡吧~"
+donate-qrcode: /img/donate.png
