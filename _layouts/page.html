@@ -50,6 +50,17 @@ layout: default
                 {% endif %}
 
                 <!-- Friends Blog -->
+                {% if site.BlogRoll %}
+                <hr>
+                <h5>BLOGROLL</h5>
+                <ul class="list-inline">
+                    {% for friend in site.BlogRoll %}
+                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+		    
+		<!-- Friends Blog -->
                 {% if site.friends %}
                 <hr>
                 <h5>FRIENDS</h5>
@@ -59,6 +70,8 @@ layout: default
                     {% endfor %}
                 </ul>
                 {% endif %}
+		    
+		    
             </div>
         {% else %}
 
