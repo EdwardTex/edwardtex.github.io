@@ -106,3 +106,34 @@ BlogRoll: [
         href: "https://www.liaoxuefeng.com/"
     }
 ]
+
+# Academic person
+Aca-People: [
+    {
+        title: "THU_Yang Liu",
+        href: "http://nlp.csai.tsinghua.edu.cn/~ly/index_cn.html"
+    },{
+        title: "CSU_Yong Wang",
+        href: "http://www.escience.cn/people/yongwang1/index.html"
+    },{
+        title: "UNSW_Daoyi Dong",
+        href: "http://www.unsw.adfa.edu.au/school-of-engineering-and-information-technology/associate-professor-daoyi-dong#quickset-people1"
+    }
+]
+
+# Wonder Tools
+WonderTools: [
+    {
+        title: "世界图书馆",
+        href: "http://library.memoryoftheworld.org/#/property=authors"
+    },{
+        title: "龙猫学术",
+        href: "http://www.6453.net/"
+    },{
+        title: "语法高亮板",
+        href: "https://paste.ubuntu.com/"
+    },{
+        title: "MIT公开课",
+        href: "https://ocw.mit.edu/index.html"
+    }
+]
