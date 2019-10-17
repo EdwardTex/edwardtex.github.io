@@ -4,7 +4,7 @@ title:      PaddlePaddle深度学习实战 Notes01
 subtitle:   读书笔记第一篇
 date:       2019-10-17
 author:     Tex
-header-img: img/post-bg-cook.jpg
+header-img: img/post-bg-paddle.png
 catalog: true
 tags:
     - 深度学习 (Deep Learning)
@@ -39,7 +39,7 @@ import this
 
     ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%20x_1%7D%3D%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%20f_1%7D%5Cfrac%7B%5Cpartial%20f_1%7D%7B%5Cpartial%20x_1%7D&plus;%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%20f_2%7D%5Cfrac%7B%5Cpartial%20f_2%7D%7B%5Cpartial%20x_1%7D)
 
-    而当`f_1`和``f_2`均为向量函数时，适应性链式法则如下
+    而当`f_1`和`f_2`均为向量函数时，适应性链式法则如下
 
     ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20%5Cvec%7Bg%7D%7D%7B%5Cpartial%20x_1%7D%3DJ%5Cvec%7Bf_1%7D%5Cfrac%7B%5Cpartial%20%5Cvec%7Bf_1%7D%7D%7B%5Cpartial%20x_1%7D&plus;J%5Cvec%7Bf_2%7D%5Cfrac%7B%5Cpartial%20%5Cvec%7Bf_2%7D%7D%7B%5Cpartial%20x_1%7D)
 
