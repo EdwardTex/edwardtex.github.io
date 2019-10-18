@@ -10,10 +10,10 @@ tags:
     - 深度学习 (Deep Learning)
     - 机器学习 (Machine Learning)
 ---
-##数学基础与Python库
+## 数学基础与Python库
 
 
-###The Zen of Python
+### The Zen of Python
 
  ```
 import this
@@ -22,19 +22,19 @@ import this
 ### Learnt Basis
 The basis of linear algebra in undergraduate, including the calculating of vectors/matrices; and the basis of calculus including derivative, chain rule, etc.
 
-###Derivatives of vectors/matrices
+### Derivatives of vectors/matrices
 
-####标量对向量求导
+#### 标量对向量求导
 函数对向量求导数，其结果为函数对向量的各个分量求偏导；
 
 ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20f%28x%29%7D%7Bx%7D%3D%5Cbegin%7Bbmatrix%7D%20%5Cfrac%7B%5Cpartial%20f%28x%29%7D%7Bx_1%7D%5C%5C%20%5Cvdots%20%5C%5C%20%5Cfrac%7B%5Cpartial%20f%28x%29%7D%7Bx_p%7D%20%5Cend%7Bbmatrix%7D%5Cin%20%5Cmathbf%7BR%5Ep%7D)
 
-####向量对向量求导
+#### 向量对向量求导
 由标量的函数构成的向量![](https://latex.codecogs.com/gif.latex?f)对于向量![](https://latex.codecogs.com/gif.latex?X)求导，其结果为一个矩阵，矩阵的第n行为函数向量![](https://latex.codecogs.com/gif.latex?f)中的每个函数对![](https://latex.codecogs.com/gif.latex?x)求偏导；
 
 ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20f%28x%29%7D%7B%5Cpartial%20x%7D%3D%5Cbegin%7Bbmatrix%7D%20%5Cfrac%7B%5Cpartial%20f_1%7D%7B%5Cpartial%20x_1%7D%20%26%20%5Cldots%20%26%20%5Cfrac%7B%5Cpartial%20f_q%7D%7B%5Cpartial%20x_1%7D%5C%5C%20%5Cvdots%20%26%20%5Cddots%20%26%5Cvdots%20%5C%5C%20%5Cfrac%7B%5Cpartial%20f_1%7D%7B%5Cpartial%20x_p%7D%20%26%20%5Cldots%20%26%20%5Cfrac%7B%5Cpartial%20f_q%7D%7B%5Cpartial%20x_p%7D%5C%5C%20%5Cend%7Bbmatrix%7D%5Cin%20R%5E%7Bp%5Ctimes%20q%7D)
 
-####向量的链式法则
+#### 向量的链式法则
 标量的链式法则
 
 ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%20x_1%7D%3D%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%20f_1%7D%5Cfrac%7B%5Cpartial%20f_1%7D%7B%5Cpartial%20x_1%7D&plus;%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%20f_2%7D%5Cfrac%7B%5Cpartial%20f_2%7D%7B%5Cpartial%20x_1%7D)
@@ -91,7 +91,7 @@ The basis of linear algebra in undergraduate, including the calculating of vecto
 #### 向量化的重要性
 在numpy中的array运算通过向量化实现，这对计算速度的提升是非常明显的（约为非向量化实现的500倍），这对于长时间的深度学习训练，可以节省大量时间。
 
-更多内容可参考[http://numpy.org](http://numpy.org "官方文档")
+更多内容可参考[官方文档](http://numpy.org "http://numpy.org")
 
 ### Matplotlib
-主要用于可视化和图像处理，更多内容可参考[http://matplotlib.org](http://matplotlib.org "官方文档")
+主要用于可视化和图像处理，更多内容可参考[官方文档](http://matplotlib.org "http://matplotlib.org")
