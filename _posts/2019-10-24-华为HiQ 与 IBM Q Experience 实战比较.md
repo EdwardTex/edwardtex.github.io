@@ -20,6 +20,8 @@ tags:
 ### 模拟量子生成随机数 (Quantum Random Number Generator)
 #### 单比特生成单个随机数
 
+![](http://i2.tiimg.com/702266/59ff190dbd3887dd.png)
+
 ![](https://wx2.sinaimg.cn/mw690/0068Igdcgy1g892pv1v4nj30da02ha9u.jpg)
 
 首先申请一个Qbit q1，作为输入，默认申请为dirac(0)态，经过H门，变为
