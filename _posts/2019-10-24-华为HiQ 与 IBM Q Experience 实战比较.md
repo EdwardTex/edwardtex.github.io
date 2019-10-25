@@ -22,33 +22,37 @@ tags:
 
 ![](http://i2.tiimg.com/702266/59ff190dbd3887dd.png)
 
-![](https://wx2.sinaimg.cn/mw690/0068Igdcgy1g892pv1v4nj30da02ha9u.jpg)
-
 首先申请一个Qbit q1，作为输入，默认申请为dirac(0)态，经过H门，变为
 ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B%5Csqrt2%7D%28%7C0%3E&plus;%7C1%3E%29)
 即测量时各有50%的概率得到dirac(0)态或dirac(1)态；代码如下；
 
 ```python
-from projectq.ops import H, Measure  
+from projectq.ops import H, Measure 
 from hiq.projectq.backends import SimulatorMPI  
 from hiq.projectq.cengines import GreedyScheduler, HiQMainEngine  
 	  
 # 创建主引擎。所有的量子程序都必须创建一个主引擎，用于解析后续指令(required)  
+
 eng = HiQMainEngine(SimulatorMPI(gate_fusion=True))  
 	  
 # 使用主引擎提供的方法创建一个量子比特  
+
 q1 = eng.allocate_qubit()  
 	  
 # 将Hadamard门作用到该量子比特上，创建叠加态  
+
 H | q1  
 	  
 # 测量该量子比特。测量基为 {|0>, |1>}  
+
 Measure | q1  
 	  
 # 调用主引擎的刷新操作，使得所有指令被执行  
+
 eng.flush()  
 	  
 # 输出测量结果。注意到测量结果依然存储在比特中，只是该比特已经塌缩成经典比特  
+
 print("Measured: {}".format(int(q1)))  
 
 ```
@@ -57,7 +61,7 @@ print("Measured: {}".format(int(q1)))
 
 同上容易得到结果如下，其中生成多少次随机数，每次生成多少随机数可自行调整；
 
-![](https://wx1.sinaimg.cn/mw690/0068Igdcgy1g892pyi3arj30f9060t8y.jpg)
+![](http://i1.fuimg.com/702266/b742f09819137abe.png)
 
 ```python
 
@@ -84,12 +88,14 @@ for i in range(0,10):
 ## Part2 IBM Q Experience
 ### 量子隐形传态 (Quantum Teleportation)
 
-![](https://wx4.sinaimg.cn/mw690/0068Igdcgy1g893tfc1vlj30go08w0sx.jpg)
-![](https://wx3.sinaimg.cn/mw690/0068Igdcgy1g893taom7lj30g109xmxb.jpg)
+![](http://i1.fuimg.com/702266/ec7c8d963a532827.png)
+
+![](http://i1.fuimg.com/702266/7bc5d0b022aba68b.png)
 
 
 ```python
 # IBM Q代码
+
 OPENQASM 2.0;
 include "qelib1.inc";
 
@@ -116,13 +122,13 @@ block1为构造要传输的量子态，经过block1之后，Alice生成了需要
 
 数学推导过程如下
 
-![](https://wx2.sinaimg.cn/mw690/0068Igdcgy1g893x3m3ycj30s90irwfw.jpg)
+![](http://i1.fuimg.com/702266/574a83c3044ec91e.png)
 
  *block5的CZ和CNOT实际是根据前一步的测量得到的经典结果来确定是否需要X和Z门,即q[0] = 1则q[2]执行Z，否则不执行Z，q[1] = 1则q[2]执行X，否则不执行X。本实例中，用CZ和CNOT来代替上述功能，实现同样的效果。*
 
 运行结果如下
 
-![](https://wx1.sinaimg.cn/mw690/0068Igdcgy1g893ti5vhjj30xc09qmxg.jpg)
+![](http://i1.fuimg.com/702266/7fb72333e425c42e.png)
 
 *可以看到，测得c[0]的结果为dirac(0)态和dirac(1)态的结果均在50%左右，我们在block1制备的要传输的量子态为![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B%5Csqrt2%7D%28%7C0%3E&plus;%7C1%3E%29)，说明我们隐形传输的结果正确；可自行调整block1部分以调整要传输的量子态，得到传输后q[2]的测量结果*
 
@@ -130,15 +136,15 @@ block1为构造要传输的量子态，经过block1之后，Alice生成了需要
 ### 制备量子纠缠 (Quantum Entanglement)
 #### 制备Bell态
 
-![](https://wx3.sinaimg.cn/mw690/0068Igdcgy1g894nxjvusj308c08w3yh.jpg)
-![](https://wx2.sinaimg.cn/mw690/0068Igdcgy1g894o1mc3bj30xc09qjro.jpg)
+![](http://i1.fuimg.com/702266/8c34bbb77486765a.png)
+![](http://i1.fuimg.com/702266/0007fc76cb2a39d5.png)
 -------------
 #### 制备3比特纠缠
 
-![](https://wx1.sinaimg.cn/mw690/0068Igdcgy1g894obca35j30b408wwej.jpg)
-![](https://wx3.sinaimg.cn/mw690/0068Igdcgy1g894orzbktj30xc09qjro.jpg)
+![](http://i1.fuimg.com/702266/7ac5c24b0582f19c.png)
+![](http://i1.fuimg.com/702266/3e2fe46b9ed10d74.png)
 ----------------
 #### 制备4比特纠缠
 
-![](https://wx1.sinaimg.cn/mw690/0068Igdcgy1g894o4xzsaj30fa08waa8.jpg)
-![](https://wx4.sinaimg.cn/mw690/0068Igdcgy1g894o8axpwj30xc09qjro.jpg)
+![](http://i1.fuimg.com/702266/987c3b661180bb07.png)
+![](http://i1.fuimg.com/702266/c94a1904ce7bb92a.png)
