@@ -132,18 +132,20 @@ block1为构造要传输的量子态，经过block1之后，Alice生成了需要
 
 *可以看到，测得c[0]的结果为dirac(0)态和dirac(1)态的结果均在50%左右，我们在block1制备的要传输的量子态为![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B%5Csqrt2%7D%28%7C0%3E&plus;%7C1%3E%29)，说明我们隐形传输的结果正确；可自行调整block1部分以调整要传输的量子态，得到传输后q[2]的测量结果*
 
-----------
+-----------------
 ### 制备量子纠缠 (Quantum Entanglement)
 #### 制备Bell态
 
 ![](http://i1.fuimg.com/702266/8c34bbb77486765a.png)
 ![](http://i1.fuimg.com/702266/0007fc76cb2a39d5.png)
--------------
+
+-----------------
 #### 制备3比特纠缠
 
 ![](http://i1.fuimg.com/702266/7ac5c24b0582f19c.png)
 ![](http://i1.fuimg.com/702266/3e2fe46b9ed10d74.png)
-----------------
+
+-----------------
 #### 制备4比特纠缠
 
 ![](http://i1.fuimg.com/702266/987c3b661180bb07.png)
