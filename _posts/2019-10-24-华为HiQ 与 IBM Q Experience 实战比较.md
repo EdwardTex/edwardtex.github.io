@@ -150,3 +150,9 @@ block1为构造要传输的量子态，经过block1之后，Alice生成了需要
 
 ![](http://i1.fuimg.com/702266/987c3b661180bb07.png)
 ![](http://i1.fuimg.com/702266/c94a1904ce7bb92a.png)
+
+
+## Part3 Problems & Lessons
+### 量子纠缠中制备量子状态Ry Rz
+
+### 4Qbit量子纠缠
