@@ -86,7 +86,7 @@ tags:
 - 框架可以高效运行：目前对于大规模的深度学习来说，巨大的数据量使得单机很难在有限时间内完成训练；这就需要集群分布式并行计算或使用多卡GPU计算，具有分布式性能的框架可以使模型训练更高效。
 
 ### PaddlePaddle实战(预测房价 From Andrew Ng)
-```python
+```
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
