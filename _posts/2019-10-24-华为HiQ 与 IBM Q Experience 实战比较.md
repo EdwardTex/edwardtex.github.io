@@ -143,7 +143,7 @@ block1为构造要传输的量子态，经过block1之后，Alice生成了需要
 -----------------
 #### 制备3比特纠缠
 
-![circuit6.png](https://i.loli.net/2019/11/01/jXcSEBR5Of1TNzD.png)
+![](https://i.loli.net/2019/11/01/3CsogQ2lSOytrub.png)
 ![hr7124uw.png](https://i.loli.net/2019/11/01/zBMeGscJ15buE3T.png)
 *同上情况类推，纠缠结果分别以50%的概率坍缩为dirac(000)态和dirac(111)态*
 
