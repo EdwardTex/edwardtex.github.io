@@ -20,10 +20,10 @@ tags:
 ### 模拟量子生成随机数 (Quantum Random Number Generator)
 #### 单比特生成单个随机数
 
-![](http://i2.tiimg.com/702266/59ff190dbd3887dd.png)
+![rand_sing.png](https://i.loli.net/2019/11/01/8mCqG6uabsSA1nk.png)
 
 首先申请一个Qbit q1，作为输入，默认申请为dirac(0)态，经过H门，变为
-![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B%5Csqrt2%7D%28%7C0%3E&plus;%7C1%3E%29)
+![](https://latex.codecogs.com/gif.latex?%5Cfrac%20%7B1%7D%7B%5Csqrt%202%7D%28%20%5Cleft%20%7C%200%20%5Cright%20%5Crangle%20&plus;%20%5Cleft%20%7C%201%20%5Cright%20%5Crangle%29)
 即测量时各有50%的概率得到dirac(0)态或dirac(1)态；代码如下；
 
 ```python
@@ -61,7 +61,7 @@ print("Measured: {}".format(int(q1)))
 
 同上容易得到结果如下，其中生成多少次随机数，每次生成多少随机数可自行调整，如下是每次生成**3个**随机数共生成**10次**的线路图和对应代码；
 
-![](http://i1.fuimg.com/702266/b742f09819137abe.png)
+![rand_multi.png](https://i.loli.net/2019/11/01/8h3HWL2aUTZEFBN.png)
 
 ```python
 
@@ -88,9 +88,9 @@ for i in range(0,10):
 ## Part2 IBM Q Experience
 ### 量子隐形传态 (Quantum Teleportation)
 
-![](http://i1.fuimg.com/702266/ec7c8d963a532827.png)
+![](https://i.loli.net/2019/11/01/bVOWLu2Y3Zatewq.png)
 
-![](http://i1.fuimg.com/702266/7bc5d0b022aba68b.png)
+![](https://i.loli.net/2019/11/01/AXrRkCnlujIPptG.png)
 
 
 ```python
@@ -122,13 +122,13 @@ block1为构造要传输的量子态，经过block1之后，Alice生成了需要
 
 数学推导过程如下
 
-![](http://i1.fuimg.com/702266/574a83c3044ec91e.png)
+![计算结果.png](https://i.loli.net/2019/11/01/PWo8Q3K2zXpZfHs.png)
 
  *block5的CZ和CNOT实际是根据前一步的测量得到的经典结果来确定是否需要X和Z门,即q[0] = 1则q[2]执行Z，否则不执行Z，q[1] = 1则q[2]执行X，否则不执行X。本实例中，用CZ和CNOT来代替上述功能，实现同样的效果。*
 
 运行结果如下
 
-![](http://i1.fuimg.com/702266/7fb72333e425c42e.png)
+![tdiewvqh.png](https://i.loli.net/2019/11/01/ioqA3PYJIysmhat.png)
 
 *可以看到，测得c[0]的结果为dirac(0)态和dirac(1)态的结果均在50%左右，我们在block1制备的要传输的量子态为![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B%5Csqrt2%7D%28%7C0%3E&plus;%7C1%3E%29)，说明我们隐形传输的结果正确；可自行调整block1部分以调整要传输的量子态，得到传输后q[2]的测量结果*
 
@@ -136,50 +136,51 @@ block1为构造要传输的量子态，经过block1之后，Alice生成了需要
 ### 制备量子纠缠 (Quantum Entanglement)
 #### 制备Bell态
 
-![](http://i1.fuimg.com/702266/8c34bbb77486765a.png)
-![](http://i1.fuimg.com/702266/0007fc76cb2a39d5.png)
+![](https://i.loli.net/2019/11/01/k6cPSIpvB4qjtHK.png)
+![](https://i.loli.net/2019/11/01/NHxpsRzhQ7V8qny.png)
 *可以看到q[0]和q[1]经过H门和CNOT门之后完成了简单的纠缠，纠缠结果分别以50%的概率坍缩为dirac(00)态和dirac(11)态，这是基本的Bell态形式之一*
 
 -----------------
 #### 制备3比特纠缠
 
-![](http://i1.fuimg.com/702266/7ac5c24b0582f19c.png)
-![](http://i1.fuimg.com/702266/3e2fe46b9ed10d74.png)
+![circuit6.png](https://i.loli.net/2019/11/01/jXcSEBR5Of1TNzD.png)
+![hr7124uw.png](https://i.loli.net/2019/11/01/zBMeGscJ15buE3T.png)
 *同上情况类推，纠缠结果分别以50%的概率坍缩为dirac(000)态和dirac(111)态*
 
 -----------------
 #### 制备4比特纠缠
 ##### 线路1
-![](http://i2.tiimg.com/702266/42c42362c090104f.png)
-![](http://i2.tiimg.com/702266/c27cdccdacf4ba50.png)
+![circuit4.png](https://i.loli.net/2019/11/01/F73WP8n1GICxDlA.png)
+![js1vgh3h.png](https://i.loli.net/2019/11/01/shBHtn84EGMZvUD.png)
 *同上情况类推，纠缠结果分别以50%的概率坍缩为dirac(0000)态和dirac(1111)态*
 
 -----------------
 ##### 线路2
-![](http://i2.tiimg.com/702266/1833f548496d805a.png)
-![](http://i2.tiimg.com/702266/c419e0e86abb534a.png)
+![circuit6.png](https://i.loli.net/2019/11/01/jXcSEBR5Of1TNzD.png)
+![](https://i.loli.net/2019/11/01/Oe3TUiHxszBv9gm.png)
 *稍微变换量子线路的形式，纠缠结果分别以25%的概率坍缩为dirac(0000)态/dirac(0110)/dirac(1001)/dirac(1111)态*
 
 -----------------
 ##### 线路3
-![](http://i1.fuimg.com/702266/00d81615a5a1d29e.png)
-![](http://i1.fuimg.com/702266/f8a0bd98d97e8ca9.png)
+![circuit5.png](https://i.loli.net/2019/11/01/XQSUpnuPTWA1YVc.png)
+![n6qnnuc4i.png](https://i.loli.net/2019/11/01/XDMy26tvlC7E1NF.png)
 *这是较为复杂的纠缠情况，出现了最多为16种态矢的纠缠结果*
 
 -----------------
 ##### 线路4
-![](http://i1.fuimg.com/702266/987c3b661180bb07.png)
-![](http://i1.fuimg.com/702266/c94a1904ce7bb92a.png)
+![](https://i.loli.net/2019/11/01/FnOuJfm4cIVYNQH.png)
+![](https://i.loli.net/2019/11/01/c1wgMjImQ9rBuvq.png)
 *这是一个非常精巧的4比特纠缠的量子线路设计，经过该量子线路的纠缠结果依然以50%的概率坍缩为dirac(0000)态和dirac(1111)态，数学推导过程如下*
 
-![](http://i2.tiimg.com/702266/2bfda5c010955e45.gif)
-![](http://i1.fuimg.com/702266/7e13d8d6d4d26735.gif)
-![](http://i1.fuimg.com/702266/d07f937f9036c99e.gif)
-![](http://i1.fuimg.com/702266/97e34204481e3a35.gif)
+![cond-1.gif](https://i.loli.net/2019/11/01/CQvK5XWkh3AEdlm.gif)
+![cond-2.gif](https://i.loli.net/2019/11/01/jvsH3ChJcpKMqur.gif)
+![cond-3.gif](https://i.loli.net/2019/11/01/PUXdvyxc5MewS7l.gif)
+![cond-4.gif](https://i.loli.net/2019/11/01/HhaldBY7gJNkv8T.gif)
+![cond-5.gif](https://i.loli.net/2019/11/01/zomONsJptbT4kAu.gif)
 
 ## Part3 问题与经验
 ### Q1.量子隐形传态中对q[0]使用Ry和Rz操作的具体情况如何？
-Ry和Rz分别表示针对某一比特在Bloch球面中绕Y轴和Z轴旋转相应角度的操作，对于初始化为dirac(0)态的q[0]比特来说，经过这种旋转操作之后就变成了叠加态，用以和q[1]/q[2]进行区分；有一个计算概率的小技巧，对于![](http://i2.tiimg.com/702266/b5027dc93b5877d5.png)，假设其与dirac(0)态的夹角为`theta`，则`alpha`就等于`cos(theta/2)`
+Ry和Rz分别表示针对某一比特在Bloch球面中绕Y轴和Z轴旋转相应角度的操作，对于初始化为dirac(0)态的q[0]比特来说，经过这种旋转操作之后就变成了叠加态，用以和q[1]/q[2]进行区分；有一个计算概率的小技巧，对于![](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cleft%20%7C%200%20%5Cright%20%5Crangle%20&plus;%20%5Cbeta%20%5Cleft%20%7C%201%20%5Cright%20%5Crangle)，假设其与dirac(0)态的夹角为`theta`，则`alpha`就等于`cos(theta/2)`
 
 ### Q2.最后的四比特纠缠推导的结果中dirac(1111)态的符号为负，与想象中的结果为正不符？
 经过和老师的探讨，得知态矢的正负符号表示的是相位的正负，并不影响态矢的测量结果，实验证明，在该量子线路测量前同一加上Z门对dirac(1)态的符号进行翻转，也不会影响最后的纠缠结果。
