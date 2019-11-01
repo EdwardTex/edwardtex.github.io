@@ -29,7 +29,7 @@ tags:
 
 - **深度学习-定义**：基于多层神经网络的，以海量数据为输入的，规则自学习的方法；
 
-![](http://i2.tiimg.com/702266/6ec316bee68a97e5.png)
+![](https://i.loli.net/2019/11/01/BnHNzdeUs2SYfyO.png)
 
 - **深度学习-优势**：通过重复利用中间层计算单元，大大减少参数设定；通过学习深层非线性网络结构，只需简单的网络结构即可实现复杂函数的逼近，具备从大量*无标注样本集*中学习数据集*本质特征*的能力；
 
@@ -50,15 +50,15 @@ tags:
 
 - **全连接网络结构(Full Connected)**：所有的输出与输入都是相连的，参数的冗余需要相当的存储和计算空间，这使得很少会使用纯FC到复杂场景中；FC大多作为CNN的“防火墙”，当训练集和测试集有较大的差异时，保证模型良好的迁移能力；
 
-![](http://i2.tiimg.com/702266/d2b3495a00880a71.png)
+![](https://i.loli.net/2019/11/01/kp9OJyKN217S3uD.png)
 
 - **卷积神经网络(Convolutional Neural Network)**：CNN由一系列层构成，每层都通过一个**可微函数**将一个量转化为另一个量，上下层神经元不直接连接，通过“卷积核”作为中介，大大减少了隐层的参数；层的类型包括卷积层(Convolutional Layer)/池化层(Pooling Layer)/全连接层(FC Layer)等；CNN专用于处理类网格结构的数据，例如图像数据；
 
-![](http://i2.tiimg.com/702266/d86a46085612a024.jpg)
+![](https://i.loli.net/2019/11/01/cUlmVWCpsakvwt1.jpg)
 
 - **循环（递归）神经网络(Recurrent Neural Network)**：隐层的输出再送回隐层的输入，反复地训练；用于处理序列数据；
 
-![](http://i2.tiimg.com/702266/9b61bbaecb4551c7.png)
+![](https://i.loli.net/2019/11/01/yVpcEhLPOZi78lJ.png)
 
 ### 机器学习回顾
 
@@ -81,7 +81,7 @@ tags:
 
 - 框架可以简化偏导计算：模型搭建的过程中，不可避免地要计算损失函数，这就需要不停地做微分运算，而计算图正好可以通过模块化的方式表达模型的内部逻辑，进而通过遍历计算图来实现微分运算，这被称为**基于计算图的声明式求解**，2012年之后主流框架都采用了这种求解方式；
 
-![](http://i2.tiimg.com/702266/86135d334b072af2.png)
+![](https://i.loli.net/2019/11/01/NCAl1mFfghaWicG.png)
 
 - 框架可以高效运行：目前对于大规模的深度学习来说，巨大的数据量使得单机很难在有限时间内完成训练；这就需要集群分布式并行计算或使用多卡GPU计算，具有分布式性能的框架可以使模型训练更高效。
 
@@ -343,5 +343,5 @@ if __name__ == '__main__':
 
 ```
 
-![](http://i2.tiimg.com/702266/e913e21e54b1578f.png)
-![](http://i2.tiimg.com/702266/3809e05b0ce2a36a.png)
+![](https://i.loli.net/2019/11/01/aDfSTFiYvPLmt3l.png)
+![](https://i.loli.net/2019/11/01/lvRO5orSgiBI4Pb.png)
