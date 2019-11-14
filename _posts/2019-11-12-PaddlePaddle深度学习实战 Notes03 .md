@@ -134,7 +134,7 @@ tags:
 ### Logistics回归模型实战
 
 #### Train with numpy
-```
+```python
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
