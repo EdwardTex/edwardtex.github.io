@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      PaddlePaddle深度学习实战 Notes02
+title:      阅读笔记：PaddlePaddle深度学习实战 Notes02
 subtitle:   读书笔记第二篇
 date:       2019-10-20
 author:     Tex

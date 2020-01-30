@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      读书笔记：投资最重要的事 The Most Important Thing Illuminated
+title:      阅读笔记：投资最重要的事 The Most Important Thing Illuminated
 subtitle:   Howard Marks  来自顶尖投资者的忠告
 date:       2019-11-01
 author:     Tex

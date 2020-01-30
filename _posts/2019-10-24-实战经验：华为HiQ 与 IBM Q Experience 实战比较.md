@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      华为HiQ 与 IBM Q Experience 实战比较
+title:      实战经验：华为HiQ 与 IBM Q Experience 实战比较
 subtitle:   量子计算仿真平台
 date:       2019-10-24
 author:     Tex
