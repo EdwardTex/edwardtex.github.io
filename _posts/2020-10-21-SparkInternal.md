@@ -18,9 +18,18 @@ tags:
 
 每个RDD在初始化以及后续存储中都会分区 (Partitioning)，分区的目的在于并行 (Parallelism)。初始化时分区总是平衡的，但某些操作后，分区就不再平衡了。因此明确何时重分区，怎样重分区，是使程序高效的关键。
 
+RDD中有两种重分区方法，如下
+
+```python
+rdd.repartition(n)
+rdd.partitionBy(n,f)
+```
+
+第一种方法不会产生分区器，而仅仅是使数据平衡；第二种方法是通过哈希分区器和自定义分区函数来实现，合理编写分区函数可以应对哈希分区器的缺陷。
+
 ### 分区方法
 
-就分区性质来说，同一RDD的分区绝对不会散列在多台机器上，且分区数量是可以指定的，默认的分区数与所有执行器总核数相同（从HDFS/WASB加载数据时除外）。
+就分区性质来说，同一RDD的分区绝对不会散列在多台机器上，且分区数量是可以指定的，默认的分区数与所有执行器总核数相同（从HDFS/WASB加载数据时除外，因为HDFS中file的分区信息会被继承）。
 
 #### 哈希分区 (Hash Partitioning)
 
@@ -100,10 +109,11 @@ None
 <function RDD.sortByKey.<locals>.rangePartitioner at 0x7f7838d31f70>
 ```
 
-
+首先一个reduceByKey生成一个hash partitioner，经过map后，为none，但再mapValue又会回到hash partitioner(retain机制)。之后一个sortByKey生成一个range partitioner，mapValue保持range partitioner。
 
 ### 洗牌操作 (Shuffle Operations)
 
-在Spark内部有必要的广依赖(Wide Dependencies)，通过某些转换操作内部的洗牌操作实现，包括`reduceByKey`/`repartition`/`coalesce`/`join(based on different partitioner)`，经过洗牌操作的结果在Spark内部会自动缓存。
+在Spark内部有必要的广依赖(Wide Dependencies)，通过某些转换操作内部的洗牌操作实现，包括`reduceByKey`/`repartition`/`substract`/`coalesce`/`join(based on different partitioner)`，经过洗牌操作的结果在Spark内部会自动缓存。
 
 其他重要的内部实现还包括工作(job)内部的任务(task)调度，以及内存管理等。
+
